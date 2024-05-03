@@ -7,6 +7,7 @@ from typing import List, Any
 
 
 def zoom_array(lst: List[Any], factor: Any = 2) -> List:
+    """ zoom_array and try to annotaed"""
     zoomed_in: List = [
         item for item in lst
         for i in range(factor)
