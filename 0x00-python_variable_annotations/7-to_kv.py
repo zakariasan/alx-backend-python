@@ -5,6 +5,6 @@ and a string str2 as arguments and returns a concatenated string"""
 from typing import Union, Tuple
 
 
-def to_kv(k: int, v: Union[int, float]) -> Tuple[str, float]:
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """Return concat list of float"""
-    return (k, v*2)
+    return (k, v**2)
