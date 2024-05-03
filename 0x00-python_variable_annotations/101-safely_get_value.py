@@ -3,14 +3,15 @@
 and a string str2 as arguments and returns a concatenated string"""
 
 
-from typing import Mapping, Any, Union
+from typing import Mapping, Any, Union, TypeVar
+T = TypeVar('T')
 
 
 def safely_get_value(
         dct: Mapping,
         key: Any,
-        default: Union[..., None] = None
-        ) -> Union[any, ...]:
+        default: Union[T, None] = None
+        ) -> Union[Any, T]:
     """ try to get the best of """
     if key in dct:
         return dct[key]
