@@ -7,6 +7,7 @@ from basic_async_syntax import wait_random
 
 
 async def wait_n(n: int, max_delay: int = 10) -> List[float]:
+    """ try to wait_n random n """
     tasks = []
     for _ in range(n):
         tasks.append(wait_random(max_delay))
