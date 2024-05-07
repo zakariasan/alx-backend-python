@@ -3,7 +3,8 @@
 a float b as arguments and returns their sum as a float."""
 import asyncio
 from typing import List
-wait_r = __import__('0-basic_async_syntax').wait_random
+import random
+wait_random = __import__('0-basic_async_syntax').wait_random
 
 
 async def wait_n(num_tasks: int, max_delay: int = 10) -> List[float]:
@@ -12,7 +13,7 @@ async def wait_n(num_tasks: int, max_delay: int = 10) -> List[float]:
     delays = []
 
     for _ in range(num_tasks):
-        task = asyncio.create_task(wait_r(max_delay))
+        task = asyncio.create_task(wait_random(max_delay))
         task.add_done_callback(lambda future: delays.append(future.result()))
         tasks.append(task)
 
