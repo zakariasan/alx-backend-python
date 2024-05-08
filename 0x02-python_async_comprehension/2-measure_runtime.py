@@ -17,5 +17,4 @@ Notice that the total runtime is roughly 10 seconds, explain it to yourself."""
         async_comprehension(),
         async_comprehension()
     )
-    end_time = time.perf_counter()
-    return end_time - start_time
+    return time.perf_counter() - start_time
